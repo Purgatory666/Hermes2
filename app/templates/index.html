@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HERMES - AI Translation Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
         /* Beige-orange color palette */
         :root {
@@ -121,42 +122,38 @@
         
         .logo {
             position: absolute;
-            top: 30px;
+            top: 10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--accent-color), #e9b384);
-            border-radius: 50%;
+            width: 300px;
+            height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
-            transition: all 0.5s ease;
-            box-shadow: 0 0 20px rgba(212, 163, 115, 0.3);
             z-index: 10;
+        }
+        
+        .logo-svg {
+            width: 100%;
+            height: 100%;
         }
         
         .logo.focused {
             top: 20px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-            font-size: 12px;
+            left: 40px;
+            width: 150px;
+            height: 30px;
         }
         
         .logo.translated {
             top: 20px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-            font-size: 12px;
+            left: 40px;
+            width: 150px;
+            height: 30px;
         }
         
         .input-container {
-            margin-top: 80px;
+            margin-top: 70px;
             position: relative;
         }
         
@@ -536,7 +533,20 @@
     </div>
     
     <div class="app-container">
-        <div class="logo" id="hermesLogo">HERMES</div>
+        <div class="logo" id="hermesLogo">
+            <svg class="logo-svg" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
+                <!-- Left Wing (enlarged) -->
+                <path d="M60 40 L10 20 L35 35 L10 65 L60 80 L80 65 L65 60 L80 55 L65 50 L80 45 L65 40 L80 35 L65 30 L80 25 L65 20 Z" fill="var(--accent-color)" stroke="var(--accent-light)" stroke-width="1.5"/>
+                <path d="M70 40 L20 25 L40 38 L20 70 L70 85 L90 70 L75 65 L90 60 L75 55 L90 50 L75 45 L90 40 L75 35 L90 30 L75 25 Z" fill="var(--accent-light)" stroke="var(--accent-light)" stroke-width="1.5"/>
+                
+                <!-- HERMES Text (enlarged) -->
+                <text x="200" y="55" text-anchor="middle" font-family="'Playfair Display', serif" font-weight="900" font-size="48" fill="var(--text-primary)">HERMES</text>
+                
+                <!-- Right Wing (enlarged) -->
+                <path d="M340 40 L390 20 L365 35 L390 65 L340 80 L320 65 L335 60 L320 55 L335 50 L320 45 L335 40 L320 35 L335 30 L320 25 L335 20 Z" fill="var(--accent-color)" stroke="var(--accent-light)" stroke-width="1.5"/>
+                <path d="M330 40 L380 25 L360 38 L380 70 L330 85 L310 70 L325 65 L310 60 L325 55 L310 50 L325 45 L310 40 L325 35 L310 30 L325 25 Z" fill="var(--accent-light)" stroke="var(--accent-light)" stroke-width="1.5"/>
+            </svg>
+        </div>
         
         <div class="input-container" id="inputContainer">
             <div class="input-section">
@@ -563,6 +573,24 @@
                         <a href="#" data-lang="Korean">Korean</a>
                         <a href="#" data-lang="Arabic">Arabic</a>
                         <a href="#" data-lang="Hindi">Hindi</a>
+                        <a href="#" data-lang="Dutch">Dutch</a>
+                        <a href="#" data-lang="Swedish">Swedish</a>
+                        <a href="#" data-lang="Norwegian">Norwegian</a>
+                        <a href="#" data-lang="Danish">Danish</a>
+                        <a href="#" data-lang="Finnish">Finnish</a>
+                        <a href="#" data-lang="Polish">Polish</a>
+                        <a href="#" data-lang="Czech">Czech</a>
+                        <a href="#" data-lang="Hungarian">Hungarian</a>
+                        <a href="#" data-lang="Greek">Greek</a>
+                        <a href="#" data-lang="Turkish">Turkish</a>
+                        <a href="#" data-lang="Thai">Thai</a>
+                        <a href="#" data-lang="Vietnamese">Vietnamese</a>
+                        <a href="#" data-lang="Indonesian">Indonesian</a>
+                        <a href="#" data-lang="Malay">Malay</a>
+                        <a href="#" data-lang="Filipino">Filipino</a>
+                        <a href="#" data-lang="Urdu">Urdu</a>
+                        <a href="#" data-lang="Bengali">Bengali</a>
+                        <a href="#" data-lang="Punjabi">Punjabi</a>
                     </div>
                 </div>
                 
@@ -575,23 +603,45 @@
                         <a href="#" data-style="meme">Meme</a>
                         <a href="#" data-style="poetic">Poetic</a>
                         <a href="#" data-style="slang">Slang</a>
+                        <a href="#" data-style="genz">Gen Z</a>
                         <a href="#" data-style="meme-british">Meme British</a>
                         <a href="#" data-style="pirate">Pirate</a>
                         <a href="#" data-style="cat">Cat</a>
                         <a href="#" data-style="professional">Professional</a>
                         <a href="#" data-style="fancy">Fancy</a>
+                        <a href="#" data-style="shakespearean">Shakespearean</a>
+                        <a href="#" data-style="anime">Anime</a>
+                        <a href="#" data-style="cowboy">Cowboy</a>
+                        <a href="#" data-style="valley-girl">Valley Girl</a>
+                        <a href="#" data-style="robot">Robot</a>
+                        <a href="#" data-style="medieval">Medieval</a>
+                        <a href="#" data-style="yoda">Yoda</a>
+                        <a href="#" data-style="victorian">Victorian</a>
+                        <a href="#" data-style="surfer">Surfer</a>
+                        <a href="#" data-style="detective">Detective</a>
                     </div>
                 </div>
                 
-                <!-- Originality Toggle -->
-                <div class="feature-item originality">
+                <!-- Originality Dropdown -->
+                <div class="feature-item originality dropdown-container">
                     <label>Originality:</label>
-                    <div class="toggle-container">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="originalityToggle">
-                            <span class="slider"></span>
+                    <div class="feature-value" id="originalityValue">Select Options ▼</div>
+                    <div class="dropdown-content">
+                        <label class="checkbox-item">
+                            <input type="checkbox" data-originality="meaning"> Meaning
                         </label>
-                        <span id="originalityStatus">OFF</span>
+                        <label class="checkbox-item">
+                            <input type="checkbox" data-originality="tone"> Tone
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" data-originality="style"> Style of Content
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" data-originality="voice"> Original Voice
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" data-originality="form"> Poem/Prose
+                        </label>
                     </div>
                 </div>
                 
@@ -630,21 +680,20 @@
         const targetLanguageValue = document.getElementById('targetLanguageValue');
         const languageSearch = document.getElementById('languageSearch');
         const writingStyleValue = document.getElementById('writingStyleValue');
-        const originalityToggle = document.getElementById('originalityToggle');
-        const originalityStatus = document.getElementById('originalityStatus');
+        const originalityValue = document.getElementById('originalityValue');
         const dialectInput = document.getElementById('dialectInput');
         const creativeIntentInput = document.getElementById('creativeIntentInput');
         let selectedStyle = '';
+        let selectedOriginality = [];
         
-        // Focus and blur effects
+        // Removed logo animation effects
+        // Logo remains static at all times
         mainInput.addEventListener('focus', () => {
-            logo.classList.add('focused');
             featuresBar.classList.add('visible');
         });
         
         mainInput.addEventListener('blur', () => {
             if (!mainInput.value) {
-                logo.classList.remove('focused');
                 featuresBar.classList.remove('visible');
             }
         });
@@ -658,9 +707,26 @@
             }
         });
         
-        // Originality toggle functionality
-        originalityToggle.addEventListener('change', () => {
-            originalityStatus.textContent = originalityToggle.checked ? 'ON' : 'OFF';
+        // Originality dropdown functionality
+        const originalityCheckboxes = document.querySelectorAll('.checkbox-item input');
+        originalityCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const value = checkbox.getAttribute('data-originality');
+                if (checkbox.checked) {
+                    selectedOriginality.push(value);
+                } else {
+                    selectedOriginality = selectedOriginality.filter(item => item !== value);
+                }
+                
+                // Update display text
+                if (selectedOriginality.length === 0) {
+                    originalityValue.textContent = 'Select Options ▼';
+                } else if (selectedOriginality.length === 1) {
+                    originalityValue.textContent = selectedOriginality[0] + ' ▼';
+                } else {
+                    originalityValue.textContent = selectedOriginality.length + ' selected ▼';
+                }
+            });
         });
         
         // Language search functionality
@@ -677,13 +743,19 @@
             });
         });
         
-        // Language selection
+        // Target Language selection
+        targetLanguageValue.addEventListener('click', function() {
+            const dropdown = this.nextElementSibling;
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+        
         const languageLinks = document.querySelectorAll('.target-language .dropdown-content a');
         languageLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const lang = this.getAttribute('data-lang');
                 targetLanguageValue.textContent = `${lang} ▼`;
+                this.closest('.dropdown-content').style.display = 'none';
             });
         });
         
@@ -730,7 +802,6 @@
             // Get form data (translate mode is default)
             const targetLang = targetLanguageValue.textContent.replace(' ▼', '');
             const writingStyle = selectedStyle;
-            const originality = originalityToggle.checked;
             const dialect = dialectInput.value.trim();
             const creativeIntent = creativeIntentInput.value.trim();
             const model = 'llama3:8b';
@@ -741,7 +812,8 @@
             formData.append('mode', 'translate');
             formData.append('target_lang', targetLang);
             formData.append('writing_style', writingStyle);
-            formData.append('originality', originality ? 'on' : '');
+            // Send selected originality options as a JSON string
+            formData.append('originality', JSON.stringify(selectedOriginality));
             if (dialect) formData.append('dialect', dialect);
             if (creativeIntent) formData.append('creative_intent', creativeIntent);
             formData.append('model', model);

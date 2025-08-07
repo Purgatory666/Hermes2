@@ -39,7 +39,7 @@ def translate():
     
     # Optional parameters with defaults
     writing_style = data.get('writing_style')
-    originality = data.get('originality', False)
+    originality = data.get('originality', '[]')
     dialect = data.get('dialect')
     creative_intent = data.get('creative_intent')
     model = data.get('model', 'llama3:8b')

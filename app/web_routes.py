@@ -17,7 +17,13 @@ def translate():
     text = request.form.get('text')
     target_lang = request.form.get('target_lang', 'English')
     writing_style = request.form.get('writing_style')
-    originality = request.form.get('originality') == 'on'
+    # Parse originality options from JSON string
+    import json
+    originality_str = request.form.get('originality', '[]')
+    try:
+        originality = json.loads(originality_str)
+    except json.JSONDecodeError:
+        originality = []
     dialect = request.form.get('dialect')
     creative_intent = request.form.get('creative_intent')
     model = request.form.get('model', 'llama3:8b')
