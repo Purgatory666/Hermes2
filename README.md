@@ -515,7 +515,7 @@ All error conditions should return appropriate HTTP status codes and descriptive
 
 ### Comprehensive Testing of Writing Styles
 
-The Hermes Translation Service offers 20 distinct writing styles. Here's how to test each one:
+The Hermes Translation Service offers 20 distinct writing styles. Here's how to test each one with expected outputs:
 
 #### 1. None (Default)
 **Purpose**: Standard translation without stylistic modifications
@@ -526,6 +526,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "This is a test sentence.",
   "target_lang": "French",
   "writing_style": ""
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "C'est une phrase de test.",
+  "detected_lang": "English"
 }
 ```
 
@@ -541,6 +549,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "¡Esto es increíble, OMG!",
+  "detected_lang": "English"
+}
+```
+
 #### 3. Poetic
 **Purpose**: Translation in poetic form with rhythm and meter
 
@@ -550,6 +566,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "The stars shine brightly in the night sky.",
   "target_lang": "German",
   "writing_style": "poetic"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "Die Sterne leuchten hell am Nachthimmel, so klar und rein.",
+  "detected_lang": "English"
 }
 ```
 
@@ -565,6 +589,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "それ本当にかっこいいね、めっちゃ好きだわ。",
+  "detected_lang": "English"
+}
+```
+
 #### 5. Gen Z
 **Purpose**: Translation using Gen Z vocabulary and expressions
 
@@ -574,6 +606,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "That's so cool, I'm totally obsessed with it!",
   "target_lang": "Korean",
   "writing_style": "genz"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "와 진짜 대박, 나 완전 중독됐어!",
+  "detected_lang": "English"
 }
 ```
 
@@ -589,6 +629,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "C'est absolument brillant, blimey!",
+  "detected_lang": "English"
+}
+```
+
 #### 7. Pirate
 **Purpose**: Translation in pirate speak with "arr" and nautical terms
 
@@ -598,6 +646,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "Hello there, welcome to our establishment.",
   "target_lang": "Spanish",
   "writing_style": "pirate"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "Ahoy matey, welcome aboard our ship.",
+  "detected_lang": "English"
 }
 ```
 
@@ -613,6 +669,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "Miaou, je suis tellement affamé, quand est le dîner ? Mrrrow.",
+  "detected_lang": "English"
+}
+```
+
 #### 9. Professional
 **Purpose**: Translation using formal, business-appropriate language
 
@@ -622,6 +686,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "We should schedule a meeting to discuss this proposal.",
   "target_lang": "German",
   "writing_style": "professional"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "Wir sollten eine Besprechung vereinbaren, um diesen Vorschlag zu besprechen.",
+  "detected_lang": "English"
 }
 ```
 
@@ -637,6 +709,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "C'est une journée magnifique et merveilleuse.",
+  "detected_lang": "English"
+}
+```
+
 #### 11. Shakespearean
 **Purpose**: Translation in Elizabethan English style
 
@@ -646,6 +726,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "Good day to thee, kind sir.",
   "target_lang": "Modern English",
   "writing_style": "shakespearean"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "Good morrow to thee, gentle sir.",
+  "detected_lang": "English"
 }
 ```
 
@@ -661,6 +749,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "それは素晴らしい！信じられない！",
+  "detected_lang": "English"
+}
+```
+
 #### 13. Cowboy
 **Purpose**: Translation with Western cowboy expressions
 
@@ -670,6 +766,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "Howdy partner, how's the weather today?",
   "target_lang": "French",
   "writing_style": "cowboy"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "Salut mon partenaire, comment est le temps aujourd'hui ?",
+  "detected_lang": "English"
 }
 ```
 
@@ -685,6 +789,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "Oh mein Gott, das ist so total toll!",
+  "detected_lang": "English"
+}
+```
+
 #### 15. Robot
 **Purpose**: Translation with mechanical, robotic language
 
@@ -694,6 +806,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "Greetings, human. How are you functioning today?",
   "target_lang": "Spanish",
   "writing_style": "robot"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "Saludos, humano. ¿Cómo estás funcionando hoy? BEEP BOOP.",
+  "detected_lang": "English"
 }
 ```
 
@@ -709,6 +829,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "Good morning, kind sir. How do you fare on this day?",
+  "detected_lang": "English"
+}
+```
+
 #### 17. Yoda
 **Purpose**: Translation in Yoda's distinctive speech pattern
 
@@ -718,6 +846,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "Strong is the force with this one.",
   "target_lang": "French",
   "writing_style": "yoda"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "Puissant, la force est avec celui-ci.",
+  "detected_lang": "English"
 }
 ```
 
@@ -733,6 +869,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "I say, this is quite remarkable indeed.",
+  "detected_lang": "English"
+}
+```
+
 #### 19. Surfer
 **Purpose**: Translation with surfer dude expressions
 
@@ -742,6 +886,14 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
   "text": "That wave was totally awesome, dude!",
   "target_lang": "Australian English",
   "writing_style": "surfer"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "That wave was totally stoked, mate!",
+  "detected_lang": "English"
 }
 ```
 
@@ -757,9 +909,17 @@ The Hermes Translation Service offers 20 distinct writing styles. Here's how to 
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "L'affaire était close, mais des questions restaient en suspens.",
+  "detected_lang": "English"
+}
+```
+
 ### Comprehensive Testing of Originality Options
 
-The Hermes Translation Service allows you to preserve specific aspects of the original text. Here's how to test each option:
+The Hermes Translation Service allows you to preserve specific aspects of the original text. Here's how to test each option with expected outputs:
 
 #### 1. Meaning
 **Purpose**: Preserve the core meaning and semantic content
@@ -770,6 +930,14 @@ The Hermes Translation Service allows you to preserve specific aspects of the or
   "text": "The CEO announced a new strategic initiative.",
   "target_lang": "Spanish",
   "originality": ["meaning"]
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "El director ejecutivo anunció una nueva iniciativa estratégica.",
+  "detected_lang": "English"
 }
 ```
 
@@ -785,6 +953,14 @@ The Hermes Translation Service allows you to preserve specific aspects of the or
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "Je suis tellement excité par cette opportunité !",
+  "detected_lang": "English"
+}
+```
+
 #### 3. Style of Content
 **Purpose**: Preserve the writing style and content structure
 
@@ -794,6 +970,14 @@ The Hermes Translation Service allows you to preserve specific aspects of the or
   "text": "The research paper presented findings on climate change.",
   "target_lang": "German",
   "originality": ["style"]
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "Das Forschungspapier präsentierte Erkenntnisse zum Klimawandel.",
+  "detected_lang": "English"
 }
 ```
 
@@ -809,6 +993,14 @@ The Hermes Translation Service allows you to preserve specific aspects of the or
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "En mi opinión, esta es la mejor solución que hemos encontrado.",
+  "detected_lang": "English"
+}
+```
+
 #### 5. Poem/Prose
 **Purpose**: Preserve the format (poem or prose)
 
@@ -821,6 +1013,14 @@ The Hermes Translation Service allows you to preserve specific aspects of the or
 }
 ```
 
+**Expected Output**:
+```json
+{
+  "translation": "Les roses sont rouges,\nLes violettes sont bleues,\nLe sucre est doux,\nEt toi aussi.",
+  "detected_lang": "English"
+}
+```
+
 #### 6. Combined Originality Options
 **Purpose**: Preserve multiple aspects simultaneously
 
@@ -830,6 +1030,14 @@ The Hermes Translation Service allows you to preserve specific aspects of the or
   "text": "The poet's words carried deep meaning and emotion.",
   "target_lang": "German",
   "originality": ["meaning", "tone", "style", "voice", "form"]
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "Die Worte des Dichters trugen tiefe Bedeutung und Emotion in sich.",
+  "detected_lang": "English"
 }
 ```
 
@@ -846,6 +1054,14 @@ To fully test the Hermes Translation Service, combine all features in a single r
   "originality": ["meaning", "tone", "voice"],
   "dialect": "Tokyo Japanese",
   "creative_intent": "Make it sound impressive for a business presentation"
+}
+```
+
+**Expected Output**:
+```json
+{
+  "translation": "この革新的なプロジェクトは、私たちのチームの創造性を示しています。",
+  "detected_lang": "English"
 }
 ```
 
