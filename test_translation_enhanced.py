@@ -7,7 +7,7 @@ def test_translation(payload, description):
     
     try:
         response = requests.post(
-            "http://127.0.0.1:5000/api/translate",
+            "http://127.0.0.1:5001/api/translate",
             headers={"Content-Type": "application/json"},
             data=json.dumps(payload)
         )

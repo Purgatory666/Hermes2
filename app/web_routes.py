@@ -10,23 +10,33 @@ def index():
 
 @web.route('/translate', methods=['POST'])
 def translate():
+    # Check if this is an AJAX request
+    is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
+    
     # Get form data
     text = request.form.get('text')
     target_lang = request.form.get('target_lang', 'English')
-    style = request.form.get('style')
-    tone_preserve = request.form.get('tone_preserve') == 'on'
-    poetic = request.form.get('poetic') == 'on'
+    writing_style = request.form.get('writing_style')
+    originality = request.form.get('originality') == 'on'
+    dialect = request.form.get('dialect')
+    creative_intent = request.form.get('creative_intent')
     model = request.form.get('model', 'llama3:8b')
     
     # Validate input
     if not text:
+        if is_ajax:
+            return jsonify({'error': 'Please enter text to translate'}), 400
         return render_template('index.html', error='Please enter text to translate')
     
-    # Build prompt and call Ollama
-    prompt = build_prompt(text, target_lang, style, tone_preserve, poetic)
+    # Build prompt and call Ollama (translate mode is default)
+    prompt = build_prompt(text, target_lang, writing_style, originality, dialect, creative_intent)
     output = call_ollama(prompt, model)
     
-    # Render template with result
+    # Return JSON for AJAX requests, HTML for regular form submissions
+    if is_ajax:
+        return jsonify({'output': output})
+    
+    # Render template with result for regular form submissions
     return render_template('index.html', result=output, original_text=text, 
-                         target_lang=target_lang, style=style, 
-                         tone_preserve=tone_preserve, poetic=poetic)
+                         target_lang=target_lang, writing_style=writing_style,
+                         originality=originality, dialect=dialect, creative_intent=creative_intent)
