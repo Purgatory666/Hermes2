@@ -512,3 +512,341 @@ curl -X POST http://localhost:5001/api/translate \
 5. **Test with Invalid JSON**: Send malformed JSON to the API endpoint
 
 All error conditions should return appropriate HTTP status codes and descriptive error messages.
+
+### Comprehensive Testing of Writing Styles
+
+The Hermes Translation Service offers 20 distinct writing styles. Here's how to test each one:
+
+#### 1. None (Default)
+**Purpose**: Standard translation without stylistic modifications
+
+**Sample Input**:
+```json
+{
+  "text": "This is a test sentence.",
+  "target_lang": "French",
+  "writing_style": ""
+}
+```
+
+#### 2. Meme
+**Purpose**: Translation in internet meme style
+
+**Sample Input**:
+```json
+{
+  "text": "This is amazing!",
+  "target_lang": "Spanish",
+  "writing_style": "meme"
+}
+```
+
+#### 3. Poetic
+**Purpose**: Translation in poetic form with rhythm and meter
+
+**Sample Input**:
+```json
+{
+  "text": "The stars shine brightly in the night sky.",
+  "target_lang": "German",
+  "writing_style": "poetic"
+}
+```
+
+#### 4. Slang
+**Purpose**: Translation using colloquial and informal language
+
+**Sample Input**:
+```json
+{
+  "text": "That's really cool, I like it a lot.",
+  "target_lang": "Japanese",
+  "writing_style": "slang"
+}
+```
+
+#### 5. Gen Z
+**Purpose**: Translation using Gen Z vocabulary and expressions
+
+**Sample Input**:
+```json
+{
+  "text": "That's so cool, I'm totally obsessed with it!",
+  "target_lang": "Korean",
+  "writing_style": "genz"
+}
+```
+
+#### 6. Meme British
+**Purpose**: Translation in British English with meme characteristics
+
+**Sample Input**:
+```json
+{
+  "text": "This is absolutely brilliant!",
+  "target_lang": "French",
+  "writing_style": "meme-british"
+}
+```
+
+#### 7. Pirate
+**Purpose**: Translation in pirate speak with "arr" and nautical terms
+
+**Sample Input**:
+```json
+{
+  "text": "Hello there, welcome to our establishment.",
+  "target_lang": "Spanish",
+  "writing_style": "pirate"
+}
+```
+
+#### 8. Cat
+**Purpose**: Translation with feline characteristics and "meow" sounds
+
+**Sample Input**:
+```json
+{
+  "text": "I'm so hungry, when is dinner?",
+  "target_lang": "French",
+  "writing_style": "cat"
+}
+```
+
+#### 9. Professional
+**Purpose**: Translation using formal, business-appropriate language
+
+**Sample Input**:
+```json
+{
+  "text": "We should schedule a meeting to discuss this proposal.",
+  "target_lang": "German",
+  "writing_style": "professional"
+}
+```
+
+#### 10. Fancy
+**Purpose**: Translation with elaborate and sophisticated vocabulary
+
+**Sample Input**:
+```json
+{
+  "text": "This is a beautiful and wonderful day.",
+  "target_lang": "French",
+  "writing_style": "fancy"
+}
+```
+
+#### 11. Shakespearean
+**Purpose**: Translation in Elizabethan English style
+
+**Sample Input**:
+```json
+{
+  "text": "Good day to thee, kind sir.",
+  "target_lang": "Modern English",
+  "writing_style": "shakespearean"
+}
+```
+
+#### 12. Anime
+**Purpose**: Translation with Japanese anime-style expressions
+
+**Sample Input**:
+```json
+{
+  "text": "That's incredible! I can't believe it!",
+  "target_lang": "Japanese",
+  "writing_style": "anime"
+}
+```
+
+#### 13. Cowboy
+**Purpose**: Translation with Western cowboy expressions
+
+**Sample Input**:
+```json
+{
+  "text": "Howdy partner, how's the weather today?",
+  "target_lang": "French",
+  "writing_style": "cowboy"
+}
+```
+
+#### 14. Valley Girl
+**Purpose**: Translation with Valley Girl speech patterns
+
+**Sample Input**:
+```json
+{
+  "text": "Oh my gosh, that is like so totally awesome!",
+  "target_lang": "German",
+  "writing_style": "valley-girl"
+}
+```
+
+#### 15. Robot
+**Purpose**: Translation with mechanical, robotic language
+
+**Sample Input**:
+```json
+{
+  "text": "Greetings, human. How are you functioning today?",
+  "target_lang": "Spanish",
+  "writing_style": "robot"
+}
+```
+
+#### 16. Medieval
+**Purpose**: Translation with medieval English vocabulary
+
+**Sample Input**:
+```json
+{
+  "text": "Good morrow, kind sir. How fare thee on this day?",
+  "target_lang": "Modern English",
+  "writing_style": "medieval"
+}
+```
+
+#### 17. Yoda
+**Purpose**: Translation in Yoda's distinctive speech pattern
+
+**Sample Input**:
+```json
+{
+  "text": "Strong is the force with this one.",
+  "target_lang": "French",
+  "writing_style": "yoda"
+}
+```
+
+#### 18. Victorian
+**Purpose**: Translation with Victorian-era English style
+
+**Sample Input**:
+```json
+{
+  "text": "I say, this is quite remarkable indeed.",
+  "target_lang": "Modern English",
+  "writing_style": "victorian"
+}
+```
+
+#### 19. Surfer
+**Purpose**: Translation with surfer dude expressions
+
+**Sample Input**:
+```json
+{
+  "text": "That wave was totally awesome, dude!",
+  "target_lang": "Australian English",
+  "writing_style": "surfer"
+}
+```
+
+#### 20. Detective
+**Purpose**: Translation with noir detective story style
+
+**Sample Input**:
+```json
+{
+  "text": "The case was closed, but questions remained.",
+  "target_lang": "French",
+  "writing_style": "detective"
+}
+```
+
+### Comprehensive Testing of Originality Options
+
+The Hermes Translation Service allows you to preserve specific aspects of the original text. Here's how to test each option:
+
+#### 1. Meaning
+**Purpose**: Preserve the core meaning and semantic content
+
+**Sample Input**:
+```json
+{
+  "text": "The CEO announced a new strategic initiative.",
+  "target_lang": "Spanish",
+  "originality": ["meaning"]
+}
+```
+
+#### 2. Tone
+**Purpose**: Preserve the emotional tone and mood
+
+**Sample Input**:
+```json
+{
+  "text": "I'm so excited about this opportunity!",
+  "target_lang": "French",
+  "originality": ["tone"]
+}
+```
+
+#### 3. Style of Content
+**Purpose**: Preserve the writing style and content structure
+
+**Sample Input**:
+```json
+{
+  "text": "The research paper presented findings on climate change.",
+  "target_lang": "German",
+  "originality": ["style"]
+}
+```
+
+#### 4. Original Voice
+**Purpose**: Preserve the author's unique voice and personality
+
+**Sample Input**:
+```json
+{
+  "text": "In my opinion, this is the best solution we've found.",
+  "target_lang": "Spanish",
+  "originality": ["voice"]
+}
+```
+
+#### 5. Poem/Prose
+**Purpose**: Preserve the format (poem or prose)
+
+**Sample Input**:
+```json
+{
+  "text": "Roses are red,\nViolets are blue,\nSugar is sweet,\nAnd so are you.",
+  "target_lang": "French",
+  "originality": ["form"]
+}
+```
+
+#### 6. Combined Originality Options
+**Purpose**: Preserve multiple aspects simultaneously
+
+**Sample Input**:
+```json
+{
+  "text": "The poet's words carried deep meaning and emotion.",
+  "target_lang": "German",
+  "originality": ["meaning", "tone", "style", "voice", "form"]
+}
+```
+
+### Testing All Features Together
+
+To fully test the Hermes Translation Service, combine all features in a single request:
+
+**Sample Input**:
+```json
+{
+  "text": "This innovative project showcases our team's creativity.",
+  "target_lang": "Japanese",
+  "writing_style": "professional",
+  "originality": ["meaning", "tone", "voice"],
+  "dialect": "Tokyo Japanese",
+  "creative_intent": "Make it sound impressive for a business presentation"
+}
+```
+
+This comprehensive testing approach ensures that all aspects of the Hermes Translation Service work correctly together, providing users with a powerful and flexible translation tool.
