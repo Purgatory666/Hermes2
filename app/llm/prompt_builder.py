@@ -1,5 +1,5 @@
 def build_prompt(text, target_lang, style=None, tone_preserve=False, poetic=False):
-    prompt = f"Translate the following into {target_lang}."
+    prompt = f"Translate the following into {target_lang}. Return ONLY the translation without any additional text, explanations, or notes."
 
     if tone_preserve:
         prompt += " Preserve the original tone and writing style."
