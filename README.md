@@ -15,17 +15,38 @@ A Flask backend that provides intelligent translation services using Ollama's lo
 ```
 Hermes/
 │
-├── app/
+├── app/                        # Main application directory
 │   ├── __init__.py             # Flask app factory
 │   ├── routes.py               # API endpoints
-│   ├── llm/
-│   │   ├── __init__.py
-│   │   ├── prompt_builder.py   # Dynamic prompt construction
-│   │   └── ollama_handler.py   # Ollama API integration
+│   ├── web_routes.py           # Web interface routes
+│   ├── templates/              # HTML templates
+│   │   └── index.html          # Main web interface
+│   └── llm/                    # LLM integration modules
+│       ├── __init__.py
+│       ├── prompt_builder.py   # Dynamic prompt construction
+│       └── ollama_handler.py   # Ollama API integration
+│
+├── assets/                     # Static assets (images, etc.)
+├── styles/                     # CSS stylesheets
+├── components/                 # Reusable UI components
+├── src/                        # Additional source files
+├── utils/                      # Utility functions
+├── tests/                      # Test suite
+│   ├── comprehensive_test.py
+│   ├── final_test.py
+│   ├── final_verification_test.py
+│   ├── test_api.py
+│   ├── test_integration.py
+│   ├── test_llm.py
+│   ├── test_ollama.py
+│   ├── test_translation.py
+│   ├── test_translation_enhanced.py
+│   └── ui_test.py
 │
 ├── run.py                      # Application entry point
 ├── requirements.txt            # Python dependencies
 ├── .env                        # Configuration
+├── .gitignore                  # Git ignore file
 └── README.md                   # This file
 ```
 
@@ -245,10 +266,10 @@ On Windows, you can use PowerShell's Invoke-WebRequest cmdlet:
 
 ```powershell
 # Basic translation
-Invoke-WebRequest -Uri http://localhost:5000/api/translate -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"text": "Hello, how are you today?", "target_lang": "Spanish"}'
+Invoke-WebRequest -Uri http://localhost:5001/api/translate -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"text": "Hello, how are you today?", "target_lang": "Spanish"}'
 
 # Translation with style and tone preservation
-Invoke-WebRequest -Uri http://localhost:5000/api/translate -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"text": "Welcome to our store!", "target_lang": "French", "style": "formal", "tone_preserve": true}'
+Invoke-WebRequest -Uri http://localhost:5001/api/translate -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"text": "Welcome to our store!", "target_lang": "French", "style": "formal", "tone_preserve": true}'
 ```
 
 ### Testing with Python Script
@@ -286,7 +307,7 @@ Hermes also includes a user-friendly web interface for easy translation without 
 
 ### Accessing the Web Interface
 
-Once the server is running, visit `http://localhost:5000` in your web browser to access the translation interface.
+Once the server is running, visit `http://localhost:5001` in your web browser to access the translation interface.
 
 ### Using the Web Interface
 
