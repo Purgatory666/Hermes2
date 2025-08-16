@@ -16,7 +16,7 @@
 
 ---
 
-## 🚀 Overview
+## 📌 Overview
 Hermes is a **Flask-based AI translation backend** powered by **Ollama's local LLM models**.  
 It intelligently adapts translations based on **style**, **tone**, and **creativity**—even making them poetic when you want.
 
