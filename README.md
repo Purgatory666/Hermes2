@@ -66,5 +66,5 @@ http://localhost:5000
 ---
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00ffcc&height=100&section=footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFFFFF,100:F5F5DC&height=100&section=footer"/>
 </p>
