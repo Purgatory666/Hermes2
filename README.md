@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFFFFF,50:F5F5DC,100:FFD700&height=200&section=header&text=Hermes%20%7C%20AI%20Translation%20Tool&fontSize=40&fontColor=000000&animation=fadeIn&fontAlignY=35" alt="Hermes Banner"/>
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFFFFF,100:F5F5DC&height=200&section=header&text=Hermes%20%7C%20AI%20Translation%20Tool&fontSize=40&fontColor=000000&animation=fadeIn&fontAlignY=35" alt="Hermes Banner"/>
 </p>
 
 <p align="center">
